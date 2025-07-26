@@ -1,0 +1,42 @@
+
+--To Clone directory from Github
+git clone https://github.com/MilanPansuriya16/Python.git
+
+--To check the currect directory
+pwd
+
+--To check the list of file in currect directory
+git ls
+
+--To change directory
+cd python
+
+--To check the git version
+git --version
+
+--To display the status of the code
+git status
+
+--Adds new or changed files in your working directory to the Git staging area.
+git add <file name>
+
+--To commit file
+git commit -m "commit message"
+
+--To push file
+git push origin main
+
+--To check branch
+git branch
+
+--To rename branch 
+git branch -M main
+
+--To navigate branch
+git checkout <branch name>
+
+--To delete branch
+git branch -d <branch name>
+
+
+
