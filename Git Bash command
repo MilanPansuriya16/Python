@@ -38,8 +38,9 @@ git checkout <branch name>
 --To create new branch
 git checkout -b <branch name>-
 
+
 --To delete branch
 git branch -d <branch name>
 
---To add
+
 
