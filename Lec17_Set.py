@@ -1,6 +1,6 @@
 # Set property :
 # UnOrdered
-# Immutable
+# mutable
 # Can not contain duplicate
 
 
