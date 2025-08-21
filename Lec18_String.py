@@ -30,4 +30,4 @@ print(Name.isalnum())                 #Check if the string contains only alphanu
 print(Name.isdigit())                 #Check if the string contains only digits , Returns true and false value
 print(ord('a'))                       #Get the Unicode code point of 'a', ASCII value is 97, it give ascii value
 print(chr(97))                        #Get the character corresponding to the Unicode code point 97, it give 'a'
-
+print(Name.swapcase())                #Swap case of the string, it convert uppercase to lowercase and lowercase to uppercase
