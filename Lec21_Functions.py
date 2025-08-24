@@ -51,4 +51,16 @@ Garden_perimeter = (100*20)
 fencing_perimeter = land_perimeter - Home_perimeter - Garden_perimeter
 fencing_cost = fencing_perimeter * 10
 
-print(fencing_cost)   
+print(fencing_cost) 
+
+
+# We can do above calculation using function
+def calculate_fencing_cost(Length,Bradth,Home_Length,Home_Bradth,Garden_Length,Garden_Bradth,Cost_per_meter):
+    land_perimeter = (Length*Bradth)
+    Home_perimeter = (Home_Length*Home_Bradth)
+    Garden_perimeter = (Garden_Length*Garden_Bradth)
+    fencing_perimeter = land_perimeter - Home_perimeter - Garden_perimeter
+    fencing_cost = fencing_perimeter * Cost_per_meter
+    return fencing_cost
+fensing_cost = calculate_fencing_cost(100,100,80,60,100,20,10)
+print(fensing_cost) 
