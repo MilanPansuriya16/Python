@@ -62,3 +62,8 @@ print(split_sentence)
 numbers = [5,2,9,1,5,6] 
 numbers.sort()
 print(numbers)
+
+# reverse method : The .reverse() method is used to reverse the order of the elements in a list. The syntax for using the .reverse() method is list.reverse().
+numbers = [5,2,9,1,5,6]
+numbers.reverse()
+print(numbers)
