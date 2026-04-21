@@ -8,4 +8,3 @@ i = newlist[0]
 
 for j in range(len(i)):
     print(j)
-
