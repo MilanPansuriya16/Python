@@ -10,6 +10,8 @@ for name in labour_name:
 # range(5)      --> 0,1,2,3,4
 # range(5,11)   --> 5,6,7,8,9,10
 # range(5,11,2) --> 5,7,9
+# range(10,1,-1) --> 10,9,8,7,6,5,4,3,2
+
 for i in range(len(labour_name)):
     logger.info(f"labour {i+1} name is {labour_name[i]}")
 

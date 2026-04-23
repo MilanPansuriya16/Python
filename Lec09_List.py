@@ -13,11 +13,11 @@ from loguru import logger
 
 # list slicing : List slicing is a technique to access a specific portion of the list. It is done by specifying the start index and end index of the portion we want to access. The syntax for list slicing is list[start:end]. The start index is inclusive and the end index is exclusive. If we want to access the entire list, we can use list[:]. If we want to access the portion from the start of the list to a specific index, we can use list[:end]. If we want to access the portion from a specific index to the end of the list, we can use list[start:].
 labour_name = ["Jagmohan", "Rampyare", "Mohan", 500,400,600]
-print(labour_name[0:3])
-print(labour_name[3:])
+print(labour_name[0:3]) # last index is not included , so it will print the elements from index 0 to index 2
+print(labour_name[3:6])  # it will print the elements from index 3 to index 5
 
 # reverse the list
-print(labour_name[::-1]) 
+print(labour_name[::-1]) # it will print the list in reverse order
 
 # list concatenation : List concatenation is the process of combining two or more lists into a single list. It is done using the + operator. The syntax for list concatenation is list1 + list2. The resulting list will contain all the elements of list1 followed by all the elements of list2.
 list1 = [1,2,3]
