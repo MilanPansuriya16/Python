@@ -1,9 +1,10 @@
-tuple1 = (10,2,3,5)
-tuple2 = (3,6,4,3)
-result = []
+ar1 = [1,5,10,20,40,80]
+ar2 = [6,7,20,80,100]
+ar3 = [3,4,15,20,30,70,80,120]
 
-for i in range(len(tuple1)):
-    result.append(tuple1[i] ** tuple2[i])
+set1 = set(ar1)
+set2 = set(ar2)
+set3 = set(ar3) 
 
-final_tuple = tuple(result)
-print(final_tuple)
+final_result = set1.intersection(set2).intersection(set3)
+print(list(final_result))
