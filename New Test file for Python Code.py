@@ -1,8 +1,9 @@
+tuple1 = (10,2,3,5)
+tuple2 = (3,6,4,3)
+result = []
 
-labour_with_cost = {"Mahesh":500, "Ramesh":400, "Mithilesh":400, "Sumesh":300, "Jagmohan":1000,"Rampyare":800}
+for i in range(len(tuple1)):
+    result.append(tuple1[i] ** tuple2[i])
 
-print(labour_with_cost)
-
-print(labour_with_cost.popitem()) # it will remove the last key and value from the dictionary and return the key and value in the form of tuple
-print(labour_with_cost)
-
+final_tuple = tuple(result)
+print(final_tuple)
