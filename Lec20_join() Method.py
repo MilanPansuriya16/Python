@@ -1,7 +1,28 @@
+# Waht is Join method?
+# How it works?
+# Real Time usage of join method?
+
+# The .join() method in Python is used to combine (concatenate) elements of an iterable (like a list or tuple) into a single string, using a specified separator.
+# All elements must be strings, otherwise you'll get an error.
+
+from loguru import logger
+
+# Example of join method with a list of strings
+lst_of_strings = ["Hello", "World", "Python", "Programming"]
+result = " ".join(lst_of_strings) # it will join all the elements of the list with a space in between
+print(result)
+
 list1 = ["apple", "banana", "cherry"]
 saparate = " & "
 result = saparate.join(list1)
 print(result)
+
+# Example of join method with a tuple of strings
+labour_with_cost = {"Mahesh":500, "Ramesh":400, "Mithilesh":400, "Sumesh":300}
+result = " # ".join(labour_with_cost) # it will join all the keys of the dictionary with a " # " in between
+print(result)
+
+##################################################################################################################################################
 
 
 # Question 1
@@ -27,17 +48,18 @@ Query = """select * from (
     inner join department d
     ON e.emp_id = d.emp_id
 )a
-where salary > 100000'"""
+where salary > 100000"""
 
-filter_conditions = []
+filter_condition = []
+
 for condition in state_dept_info:
-    for key,value in condition.items():
-        filter_conditions.append(f'{key} = "{value}"')
-print(filter_conditions)
+	for key,value in condition.items():
+		filter_condition.append(f"{key} = '{value}'")
 
+# print (filter_condition)
 
-saparate = " or "
-final_filter_condition = saparate.join(filter_conditions)
+result = " or ".join(filter_condition)
 
-final_query = Query + " and (" + final_filter_condition + ")"
+# print(result)
+final_query = Query + " and (" + result + ")"
 print(final_query)
