@@ -33,6 +33,7 @@ def calculate_fencing_coast(Length,Bradth,Cost_per_meter):
 fensing_cost = calculate_fencing_coast(20,10,50)
 print(fensing_cost)
 
+##################################################################################################################################################################
 
 ##Problem 2
 # A land of 100m x 100m has a house of 80m x 60m and a garden of 100m x 20m.
