@@ -1,31 +1,14 @@
-
-from loguru import logger
-import configparser
-
-config = configparser.ConfigParser()
-
-config.read(r"C:\Users\milan.pansuriya\Documents\Python\book_config_file.ini")
-
-# Math_Book_Cost = config["Book"]["Math"]
-# print(Math_Book_Cost)
-
-student_details = {1:["Math","History"],2:["Biology","Chemistry","History"],3:["Science"]}
-
-student_book_cost = {}
-for key,values in student_details.items():
-    book_price = 0
-    count = 0 
-    for i in values:
-        count += 1
-        book_price = book_price + int(config["Book"][i])
+class Device:
+    def __init__(self,name):
+        print("Init called for",name)
+        self.name = name.upper()
     
-    if count>1:
-        book_price = book_price - (book_price * 0.1)
-    student_book_cost[key] = book_price
-    
-print(student_book_cost)
+    def show(self):
+        print("Device:", self.name)
 
 
-# print((178 + 59)- ((178 + 59)*0.1))
-# print((165 + 110 + 59)- ((165 + 110 + 59)*0.1))
-# print(262)
+d1 = Device("laptop")
+d2 = Device("mobile")
+
+d1.show()
+d2.show()
