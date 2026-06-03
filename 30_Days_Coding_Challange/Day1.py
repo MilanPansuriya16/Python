@@ -4,7 +4,7 @@ https://www.geeksforgeeks.org/problems/print-alternate-elements-of-an-array/1?pa
 https://www.geeksforgeeks.org/problems/count-odd-even/1
 '''
 
-#########################################################################################3
+#########################################################################################
 class Solution:
 	def countOddEven(self, arr):
 		#Code here
@@ -17,7 +17,7 @@ class Solution:
 		        odd_element = odd_element + 1
 		return odd_element,even_element 
 	
-#########################################################################################3
+#########################################################################################
 class Solution:
     def getAlternates(self, arr):
         # Code Here
