@@ -20,7 +20,7 @@ class Solution:
         return True
     
 #########################################################################################
- class Solution:
+class Solution:
     def swapKth(self, arr, k):
         # Code Here
         beg_index = k-1
