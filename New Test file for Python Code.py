@@ -5,6 +5,11 @@
     
 
 arr = [1, 2, 3, 4, 5, 6, 7, 8]
-k = 3
-print(arr[k])
-print(arr[-k])
+min = arr[0]
+max = arr[0]
+for i in arr:
+    if i < min:
+        min = i
+    if i > max:
+        max = i
+print([min,max])
