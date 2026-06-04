@@ -7,16 +7,16 @@ https://www.geeksforgeeks.org/problems/count-odd-even/1
 #########################################################################################
 class Solution:
 	def countOddEven(self, arr):
-		#Code here
-		odd_element = 0 
+		# Code here
+		odd_element = 0
 		even_element = 0
 		for num in arr:
-		    if num%2 == 0:
-		        even_element = even_element + 1
-		    else:
-		        odd_element = odd_element + 1
-		return odd_element,even_element 
-	
+			if num % 2 == 0:
+				even_element = even_element + 1
+			else:
+				odd_element = odd_element + 1
+		return odd_element, even_element
+
 #########################################################################################
 class Solution:
     def getAlternates(self, arr):
