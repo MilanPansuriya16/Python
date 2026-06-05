@@ -2,13 +2,11 @@
 # end_index = k
         
 # arr[beg_index],arr[end_index] = arr[beg_index],arr[-end_index]
-s = "i love programming"    
-new_s = s.split(' ')
-for i in range(len(new_s)):
-    char = new_s[i]
-    word = char[0].upper()
-    new_word = word + char[1:]
-    new_s[i] = new_word
-
-output = ' '.join(new_s)
-print(output)
+def getAlternates(self, arr):
+    alternate = []
+    for i in range(len(arr)):
+        if i % 2 == 0:
+            continue
+        else:
+            alternate.append(arr[i])
+    return alternate
