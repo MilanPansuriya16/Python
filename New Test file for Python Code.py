@@ -1,12 +1,23 @@
-# beg_index = k+1
-# end_index = k
+
+
+def binary_search(arr, k):
+    start = 0
+    end = len(arr)
+    middle_index = len(arr)//2
+
+    if k == arr[middle_index]:
+        return True
+    elif k < arr[middle_index]:
+        end = middle_index 
+    else:
+        start = middle_index + 1
         
-# arr[beg_index],arr[end_index] = arr[beg_index],arr[-end_index]
-def getAlternates(self, arr):
-    alternate = []
-    for i in range(len(arr)):
-        if i % 2 == 0:
-            continue
-        else:
-            alternate.append(arr[i])
-    return alternate
+    for i in range(start,end):
+        if arr[i] == k:
+            return True
+    
+
+arr = [1,2,3,4,6]
+k = 6
+binary_search(arr, k)
+    
