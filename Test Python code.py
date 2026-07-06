@@ -1,6 +1,20 @@
-a = 'MilanPansuriya'
+dict = {}
+arr = ['john','johnny','jackie','johnny','john','jackie','jamie','jamie','john','johnny','jamie','johnny','john']
 
-for i in range(0,len(a),-2):
-    print(i)
+for i in arr:
+    if i in dict:
+        dict[i] += 1
+    else:
+        dict[i] = 1
 
-i+
+winner_vote = 0
+
+for key,value in dict.items():
+    if value > winner_vote:
+        winner_vote = value
+
+print(dict)
+print(winner_vote)
+winner_name = min(key for key,value in dict.items() if value == winner_vote)
+
+print(winner_name)
