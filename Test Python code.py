@@ -1,22 +1,19 @@
 
-def subarraySum(arr, target):
-    # code here
-    
-    l = 0
-    r = 0
-    sum = 0
-    
-    for r in range(len(arr)):
-        sum += arr[r]
+class Solution:
+    def minJumps(self, arr):
+        # code here
         
-        while(sum>target):
-            sum -= arr[l]
-            l += 1
-
-        if sum == target:
-            return [l+1,r+1]
+        arr_last = len(arr)-1
+        start = 0
+        jump = 0
+        total = 0
         
-    return -1
+        
+        while(start<=arr_last):
+                
+            if arr[start]:
+                return -1
+           
 
-ans = subarraySum([1,2,3,7,5], 12)
-print(ans)
+               
+        return jump
