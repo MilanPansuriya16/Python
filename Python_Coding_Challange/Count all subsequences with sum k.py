@@ -1,7 +1,3 @@
-'''
-https://www.geeksforgeeks.org/problems/check-if-there-exists-a-subsequence-with-sum-k/1
-'''
-
 
 #########################################################################################
 
@@ -11,21 +7,19 @@ class Solution:
         
         def backtrack(index,total):
             if total == k:
-                return True
+                return 1
             elif total > k:
-                return False
+                return 0
             if index >= len(arr):
-                return False
+                return 0
             
             new_sum = total + arr[index]
             pick = backtrack(index + 1, new_sum)
-            if pick == True:
-                return True
-            
+
             new_sum = total
             not_pick = backtrack(index + 1, new_sum)
             
-            return not_pick
+            return pick + not_pick
             
         return backtrack(0,0) 
             
