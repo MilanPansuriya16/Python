@@ -1,26 +1,10 @@
 
-arr = list(map(int, input().split()))
-stack = []
-n = len(arr)
+from loguru import logger
 
-for i in range(0,n):
-    curr = arr[i]
+labour_with_cost = {"Mahesh":500, "Ramesh":400, "Mithilesh":400, "Sumesh":300}
 
-    # A collision is possible only when the last stored value and the current value move in opposite directions.
-    while stack and stack[-1] * curr < 0:
-        if abs(stack[-1]) < abs(curr):
-            stack.pop()
-        elif abs(stack[-1]) == abs(curr):
-            # Both destroy each other, so nothing is added.
-            stack.pop()
-            curr = None
-            break
-        else: # abs(stack[-1]) > abs(curr)
-            # The current value is destroyed by a larger one in the stack.
-            curr = None
-            break
-        
-    if curr is not None:
-        stack.append(curr)
+# Update the dictionary # if key is not present then it will add the key and value in the dictionary
+labour_with_cost["Jagmohan"] = 1000
+labour_with_cost["Mahesh"] = 800
 
-print(stack)
+logger.info(labour_with_cost)
