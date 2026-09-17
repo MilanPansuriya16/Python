@@ -19,10 +19,7 @@ class Solution:
         while r < n:
             if s[r] in my_dict:
                 pos = my_dict[s[r]]
-                if l > pos:
-                    my_dict[s[r]] = r
-                else:
-                    l = pos + 1
+                l = max(l,my_dict[s[r]]+1)
                     
             maxi = max(maxi,(r-l+1))
             my_dict[s[r]] = r
