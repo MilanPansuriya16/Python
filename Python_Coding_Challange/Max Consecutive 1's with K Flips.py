@@ -1,5 +1,5 @@
 '''
-https://www.geeksforgeeks.org/problems/find-first-repeated-character4108/1
+https://www.geeksforgeeks.org/problems/maximize-number-of-1s0905/1
 '''
 
 # Subarray/Substring = contiguous
@@ -8,24 +8,27 @@ https://www.geeksforgeeks.org/problems/find-first-repeated-character4108/1
 ##########################  Sliding Window Approach  ##########################
 
 class Solution:
-    def longestUniqueSubstr(self, s):
+    def maxOnes(self, arr, k):
         # code here
         
         l = 0
         r = 0
-        n = len(s)
+        n = len(arr)
+        zero_count = 0
         maxi = 0
-        my_dict = {}
         
         while r < n:
-            if s[r] in my_dict:
-                pos = my_dict[s[r]]
-                l = max(l,my_dict[s[r]]+1)
-                    
-            maxi = max(maxi,(r-l+1))
-            my_dict[s[r]] = r
-            r = r+1
-        
+            if arr[r] == 0:
+                zero_count += 1
+                
+            if zero_count > k:
+                if arr[l] == 0:
+                    zero_count -= 1
+                l += 1
+                
+            if zero_count <= k:
+                maxi = max(maxi,r-l+1)
+            r += 1
         return maxi
 	
 #########################################################################################
