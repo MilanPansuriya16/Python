@@ -14,8 +14,12 @@
 # arr.sort(key=lambda x: (x[1],x[0]))
 # print(arr)  
 
-s = -123
-rev = str(s)
-n = len(rev)
-a = rev[n:0:-1]
-print(a)
+import math
+
+
+a = 18
+b = math.sqrt(a)
+c = a ** 0.5
+print(b)
+print(c)
+
