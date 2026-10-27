@@ -1,25 +1,19 @@
+nums = [0,1,0,3,12]
+print(nums)
+n = len(nums)
+i = 0
+j = 0
+while i < n:
+    if nums[i] == 0:
+        while j < n:
+            if nums[j] != 0:
+                break
+            else:
+                j += 1
+    if j >= n:
+        break
+    nums[i],nums[j] = nums[j],nums[i]
+    i += 1
+    j = i
 
-
-# val = [1, 3, 0, 5, 8, 5]
-# wt = [2, 4, 6, 7, 9, 9]
-
-# arr = []
-        
-# for i in range(len(val)):
-#     temp = [val[i],wt[i],i+1]
-#     arr.append(temp)
-
-# # print(arr)
-
-# arr.sort(key=lambda x: (x[1],x[0]))
-# print(arr)  
-
-import math
-
-
-a = 18
-b = math.sqrt(a)
-c = a ** 0.5
-print(b)
-print(c)
-
+print(nums)
