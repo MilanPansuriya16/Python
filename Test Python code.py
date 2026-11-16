@@ -1,19 +1,17 @@
-nums = [0,1,0,3,12]
-print(nums)
-n = len(nums)
-i = 0
-j = 0
-while i < n:
-    if nums[i] == 0:
-        while j < n:
-            if nums[j] != 0:
-                break
-            else:
-                j += 1
-    if j >= n:
-        break
-    nums[i],nums[j] = nums[j],nums[i]
-    i += 1
-    j = i
+matrix = [[1,2,3],[4,5,6],[7,8, 9]]
 
-print(nums)
+n = len(matrix)
+m = len(matrix[0])
+
+for i in range(n):
+    for j in range(m):
+        if i < j:
+            matrix[i][j],matrix[j][i] = matrix[j][i],matrix[i][j]
+
+for i in range(n):
+    for j in range(m):
+        if j < m // 2:
+            matrix[i][j],matrix[i][m-j-1] = matrix[i][m-j-1],matrix[i][j]
+
+
+print(matrix)
