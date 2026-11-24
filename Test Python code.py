@@ -1,17 +1,23 @@
-matrix = [[1,2,3],[4,5,6],[7,8, 9]]
-
-n = len(matrix)
-m = len(matrix[0])
-
-for i in range(n):
-    for j in range(m):
-        if i < j:
-            matrix[i][j],matrix[j][i] = matrix[j][i],matrix[i][j]
-
-for i in range(n):
-    for j in range(m):
-        if j < m // 2:
-            matrix[i][j],matrix[i][m-j-1] = matrix[i][m-j-1],matrix[i][j]
-
-
-print(matrix)
+nums = [1,2]
+candidate = None
+count = 0
+m = len(nums)
+if m >= 3:
+    n = len(nums)//3
+else:
+    n = 1
+arr = []
+for i in range(len(nums)):
+    if count == 0:
+        candidate = nums[i]
+        count = 1
+    else:
+        if candidate == nums[i]:
+            count += 1
+        else:
+            count -= 1
+    if count == n:
+        if candidate not in arr:
+            arr.append(candidate)
+    
+print(arr)
